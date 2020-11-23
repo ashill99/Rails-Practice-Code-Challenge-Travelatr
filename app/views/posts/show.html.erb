@@ -1,0 +1,13 @@
+<h1> Show Posts Page </h1>  </h2>
+
+<h2> <%= @post.title %></h2> 
+
+<p>Author: <%=link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
+
+<p>Destination: <%=link_to @post.destination.name, destination_path(@post.destination) %></p>
+
+<p>Likes: <%= @post.likes.to_i %></p>
+
+
+<%= button_to 'Like', add_like_path(@post) %>
+

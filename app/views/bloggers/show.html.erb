@@ -1,0 +1,9 @@
+<h1>Blogger Show Page</h1>
+
+<b>Name: </b><%= @blogger.name %> <br><br>
+<b>Age: </b> <%= @blogger.age %><br><br>
+<b>Bio: </b> <%= @blogger.bio %><br><br>
+
+<p><%= @blogger.total_likes %><br><br>
+
+Most liked blog post: <%= link_to 'Most Liked Post', post_path(@blogger.most_liked_post) %>

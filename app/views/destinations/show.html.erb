@@ -1,0 +1,14 @@
+<h1> Destination Show Page </h1>
+
+<h2><%= @destination.name %></h2>
+Average Age of visitor: <% average_age =  @destination.avg_blogger_age  %>
+<% if average_age > 0 %>
+<b><%= average_age.round(2) %></b>
+<% else %>
+<%= 'No visitors' %>
+<% end %>
+
+<h3> Posts: </h3> 
+<ul><p> <% @destination.posts.last(5).each do |post|%>
+<li><%= post.title %></li>
+<% end%></ul>
